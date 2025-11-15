@@ -2,7 +2,7 @@
 * Distributed under the Boost Software License, Version 1.0.
 * See accompanying file LICENSE_1_0.txt
 * or copy at http://www.boost.org/LICENSE_1_0.txt
-* 2025-07-27
+* 2025-11-14
 * https://github.com/Aleksandr3Bocharov/refalabeinsteinpuzzle
 
 *====================================================================
@@ -55,7 +55,7 @@ RefalABEinsteinPuzzle_GUI +
 
     ENTRY Go
     EXTRN Answer, Solve
-    EXTRN Map_Accumulator, Del_Accumulator, P1, Symb, Br, Dg
+    EXTRN Map_Accumulator, Del_FirstW, P1, Symb, Br, Dg
     EXTRN True, False
     EXTRN GUI_Init, GUI_Close, Dialog_Info, Dialog_Is_Exit
     EXTRN View_Answer, View_Rule, View_Table, View_Show
@@ -124,13 +124,13 @@ Do_Solve_Out
 Do_Solve_Out_Aux
     (S.Rule E._ '=' V.Table) S.Position +
         = <View_Rule S.Position S.Rule <Rule_Text S.Rule>> +
-        <Del_Accumulator <Map_Accumulator &Do_Map_Row 1 V.Table>>
+        <Del_FirstW <Map_Accumulator &Do_Map_Row 1 V.Table>>
 
 Do_Map_Row
     S.Row (&Home S.Home &Color E.Color &Nationality E.Nationality +
     &Cigarettes E.Cigarettes &Pet E.Pet &Drink E.Drink) +
         = <P1 S.Row> +
-        <Del_Accumulator <Map_Accumulator &Do_Map_Col (S.Row 0) +
+        <Del_FirstW <Map_Accumulator &Do_Map_Col (S.Row 0) +
             (<Symb S.Home>) +
             (<Object_Text E.Color>) +
             (<Object_Text E.Nationality>) +

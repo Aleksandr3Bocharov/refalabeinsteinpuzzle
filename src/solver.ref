@@ -2,7 +2,7 @@
 * Distributed under the Boost Software License, Version 1.0.
 * See accompanying file LICENSE_1_0.txt
 * or copy at http://www.boost.org/LICENSE_1_0.txt
-* 2025-07-27
+* 2025-11-14
 * https://github.com/Aleksandr3Bocharov/refalabeinsteinpuzzle
 
 *====================================================================
@@ -19,7 +19,7 @@ Solver +
     ENTRY Cigarettes, Dunhill, Rothmans, PallMall, Marlboro, Winfield
     ENTRY Pet, Cat, Horse, Bird, Dog, Fish
     ENTRY Drink, Water, Tea, Milk, Coffee, Beer
-    EXTRN P1, Min, LengW, Br, Dg
+    EXTRN P1, MinW, LengW, Br, Dg
     EMPTY Impossible, Left, Member, Nextto, Rule_Tables, Rule_Tables_Temp
     EMPTY Steps, Steps_Back, Home
     EMPTY Color, Yellow, Blue, Red, Green, White
@@ -164,7 +164,7 @@ Find_Min_Rule_Aux
 
 Min_Rule
     S.Len S.Min S.New_Len E._ S.Rule +
-        = <Min (S.Len S.Min) (S.New_Len S.Rule)>
+        = <MinW (S.Len S.Min) (S.New_Len S.Rule)>
 
 * <Rule S(1..16).Rule> == S(&Member &Left &Nextto).Predicate V.Object V.Object | &Fish
 *
