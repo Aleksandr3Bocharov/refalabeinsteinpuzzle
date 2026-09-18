@@ -2,7 +2,7 @@
 // Distributed under the Boost Software License, Version 1.0.
 // See accompanying file LICENSE_1_0.txt
 // or copy at http://www.boost.org/LICENSE_1_0.txt
-// 2026-07-17
+// 2026-09-18
 // https://github.com/Aleksandr3Bocharov/refalabeinsteinpuzzle
 
 //====================================================================
@@ -18,7 +18,7 @@ $ENTRY Nationality, Norwegian, Dane, Englishman, German, Swede;
 $ENTRY Cigarettes, Dunhill, Rothmans, PallMall, Marlboro, Winfield;
 $ENTRY Pet, Cat, Horse, Bird, Dog, Fish;
 $ENTRY Drink, Water, Tea, Milk, Coffee, Beer;
-$EXTERN P1, MinW, LengW, Br, Dg;
+$EXTERN P1, MinW, LengthW, Br, Dg;
 $EMPTY Impossible, Left, Member, Nextto, Rule_Tables, Rule_Tables_Temp;
 $EMPTY Steps, Steps_Back, Home;
 $EMPTY Color, Yellow, Blue, Red, Green, White;
@@ -132,7 +132,7 @@ $FUNC Find_Min_Rule
     (s.Min) e._ = s.Min;
     (s.Min e.Rest_Rules) e.Table =
         <Apply_Rule <Rule s.Min> e.Table> 
-        <Find_Min_Rule_Aux (<LengW <Dg Rule_Tables>> s.Min) (e.Rest_Rules) e.Table>;
+        <Find_Min_Rule_Aux (<LengthW <Dg Rule_Tables>> s.Min) (e.Rest_Rules) e.Table>;
 }
 
 $FUNC Find_Min_Rule_Aux
@@ -141,7 +141,7 @@ $FUNC Find_Min_Rule_Aux
     (e._ s.Min) () e.Table = s.Min;
     (s.Len e._ s.Min) (s.Rule e.Rest_Rules) e.Table =
         <Apply_Rule <Rule s.Rule> e.Table>
-        <Find_Min_Rule_Aux <Min_Rule s.Len s.Min <LengW <Dg Rule_Tables>> s.Rule> (e.Rest_Rules) e.Table>;
+        <Find_Min_Rule_Aux <Min_Rule s.Len s.Min <LengthW <Dg Rule_Tables>> s.Rule> (e.Rest_Rules) e.Table>;
 }
 
 $FUNC Min_Rule

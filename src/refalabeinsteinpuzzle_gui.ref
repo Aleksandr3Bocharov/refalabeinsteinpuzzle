@@ -2,7 +2,7 @@
 // Distributed under the Boost Software License, Version 1.0.
 // See accompanying file LICENSE_1_0.txt
 // or copy at http://www.boost.org/LICENSE_1_0.txt
-// 2026-07-17
+// 2026-09-18
 // https://github.com/Aleksandr3Bocharov/refalabeinsteinpuzzle
 
 //============================================================================================================================
@@ -45,7 +45,7 @@ $START RefalABEinsteinPuzzle_GUI;
 
 $ENTRY Go;
 $EXTERN Answer, Solve;
-$EXTERN Map_Accumulator, Del_FirstW, P1, Symb, Br, Dg;
+$EXTERN Map_Accumulator, Del_Left, P1, Symb, Br, Dg;
 $EXTERN True, False;
 $EXTERN GUI_Init, GUI_Close, Dialog_Info, Dialog_Is_Exit;
 $EXTERN View_Answer, View_Rule, View_Table, View_Show;
@@ -117,14 +117,14 @@ $FUNC Do_Solve_Out_Aux
 {
     (s.Rule e._ '=' v.Table) s.Position =
         <View_Rule s.Position s.Rule <Rule_Text s.Rule>>
-        <Del_FirstW <Map_Accumulator Do_Map_Row 1 v.Table>>;
+        <Del_Left 1 <Map_Accumulator Do_Map_Row 1 v.Table>>;
 }
 
 $FUNC Do_Map_Row
 {
     s.Row (Home s.Home Color e.Color Nationality e.Nationality Cigarettes e.Cigarettes Pet e.Pet Drink e.Drink) = 
         <P1 s.Row>
-        <Del_FirstW <Map_Accumulator Do_Map_Col (s.Row 0) (<Symb s.Home>) (<Object_Text e.Color>) (<Object_Text e.Nationality>) (<Object_Text e.Cigarettes>) (<Object_Text e.Pet>) (<Object_Text e.Drink>)>>;
+        <Del_Left 1 <Map_Accumulator Do_Map_Col (s.Row 0) (<Symb 10 s.Home>) (<Object_Text e.Color>) (<Object_Text e.Nationality>) (<Object_Text e.Cigarettes>) (<Object_Text e.Pet>) (<Object_Text e.Drink>)>>;
 }
 
 $FUNC Do_Map_Col
