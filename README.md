@@ -1,6 +1,6 @@
 # RefalABEinsteinPuzzle
 
-Решение [задачи Эйнштейна](https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%B0%D0%B4%D0%BA%D0%B0_%D0%AD%D0%B9%D0%BD%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0?spm=a2ty_o01.29997173.0.0.744655fbkPnIR5), написанное на языке программирования [РефалАБ](https://github.com/Aleksandr3Bocharov/refalab).
+Решение [задачи Эйнштейна](https://ru.wikipedia.org/wiki/Загадка_Эйнштейна), написанное на языке программирования [РефалАБ](https://github.com/Aleksandr3Bocharov/refalab).
 
 Программа "RefalABEinsteinPuzzle" решает логическую задачу Эйнштейна с пошаговым выводом процесса решения.
 
@@ -116,7 +116,7 @@
         ./make_run
 
 **Что происходит:**
-1. Скрипт компилирует исходные файлы РефалАБ и C;
+1. Скрипт компилирует исходные файлы РефалАБ;
 2. Создаёт исполняемый файл `bin/refalabeinsteinpuzzle`;
 3. Запускает программу, которая решает задачу.
 
@@ -181,7 +181,7 @@
         ./make_run_gui
 
 **Особенности GUI версии:**
-- Графическое окно 1024×360 пикселей (уменьшается до 1300×550 после решения);
+- Графическое окно 1300×820 пикселей (уменьшается до 1300×550 после решения);
 - Поддержка кириллицы (шрифт DejaVu);
 - Частота обновления: 60 FPS.
 
@@ -249,7 +249,7 @@ Boost Software License 1.0 (BSL-1.0). Подробности в файле [LICE
 ## Ссылки
 
 - [РефалАБ](https://github.com/Aleksandr3Bocharov/refalab) — основной проект
-- [Загадка Эйнштейна на Wikipedia](https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%B0%D0%B4%D0%BA%D0%B0_%D0%AD%D0%B9%D0%BD%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0?spm=a2ty_o01.29997173.0.0.744655fbkPnIR5)
+- [Загадка Эйнштейна на Wikipedia](https://ru.wikipedia.org/wiki/Загадка_Эйнштейна)
 - [raylib](https://www.raylib.com/)
 - [raygui](https://github.com/raysan5/raygui)
 
